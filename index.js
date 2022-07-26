@@ -107,3 +107,4 @@ equals.addEventListener('click', () => {
     calculator.calculate()
     calculator.updateDisplay()
 })
+
