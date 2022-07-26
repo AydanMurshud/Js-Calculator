@@ -15,6 +15,8 @@ class Calculator {
             return this.curentNum += '0.'
         } else if (this.curentNum === '' && digit === '.') {
             return this.curentNum += '0.'
+        } else if (this.curentNum === '0' && digit !== '0') {
+            return this.curentNum = digit;
         }
         this.curentNum += digit.toString();
 
@@ -43,10 +45,17 @@ class Calculator {
                 calc = curentNum * prevNum;
                 break;
             case '÷':
-                calc = curentNum / prevNum;
+              calc = prevNum / curentNum;
+            if(calc>Number.MAX_VALUE){
+              calc = NaN
+            }
                 break;
         }
-        this.curentNum = calc;
+      if(isNaN(calc)){
+                     calc = '';
+        alert("YOU CAN'T DIVIDE BY ZERO")
+                }
+        this.curentNum = calc.toString();
         this.prevNum = '';
         this.operator = undefined;
     }
