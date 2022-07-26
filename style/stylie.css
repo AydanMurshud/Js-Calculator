@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, rgb(146, 92, 212), rgb(0, 217, 255));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container {
+  margin-top: 4rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.205);
+  padding: 10px;
+  box-shadow: 2px 10px 18px black;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.432);
+}
+body .container .display {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(247, 247, 247, 0.205);
+  border: 1px solid rgba(0, 0, 0, 0.432);
+  box-shadow: inset 1px 1px 10px black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+body .container .display .previous-num {
+  width: 100%;
+  min-height: 20px;
+  font-size: 20px;
+  text-align: end;
+}
+body .container .display .current-num {
+  width: 100%;
+  font-size: 30px;
+  text-align: end;
+}
+body .container .keys {
+  width: 100%;
+  display: grid;
+  border: 1px solid rgba(0, 0, 0, 0.432);
+  grid-template-columns: repeat(4, 90px);
+  grid-template-rows: minmax(70px, auto) repeat(4, 70px);
+}
+body .container .keys button {
+  border: 1px solid grey;
+  background-color: transparent;
+  font-size: 1.4rem;
+}
+body .container .keys button:hover {
+  background-color: rgba(255, 255, 255, 0.596);
+}
+body .container .keys .big {
+  grid-column: span 2;
+}/*# sourceMappingURL=stylie.css.map */
