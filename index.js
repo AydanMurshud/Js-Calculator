@@ -11,12 +11,14 @@ class Calculator {
     }
     stackNumbers(digit) {
         if (digit === '.' && this.curentNum.includes('.')) return
-        if (this.curentNum === '' && digit === '0') {
-            return this.curentNum += '0.'
-        } else if (this.curentNum === '' && digit === '.') {
-            return this.curentNum += '0.'
+        if (this.curentNum === '0'&& digit!== '.') {
+            return this.curentNum = digit;
+        } else if (this.curentNum === '0' && digit === '.') {
+            return this.curentNum += '.'
         } else if (this.curentNum === '0' && digit !== '0') {
             return this.curentNum = digit;
+        }else if(this.curentNum ==='' && digit === '.'){
+          this.curentNum +='0'
         }
         this.curentNum += digit.toString();
 
@@ -65,7 +67,7 @@ class Calculator {
             this.calculate()
         }
         this.operator = operator;
-        this.prevNum = this.curentNum;
+        this.prevNum = this.curentNum + ' ' +operator;
         this.curentNum = '';
     }
 
