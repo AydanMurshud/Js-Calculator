@@ -5,8 +5,8 @@
 <p align="justfy"> We look at the Calculator class as an abstract object exposed in code.</p>
 <h3 align="center">What does a calculator physically have?</br> Screen and buttons.</h3>
 <p>The screen shows the <b>current number</b> and the <b>previous number</b>.</br>
-<img width='500px' src="/imgs/displayTags.png" alt="">
-We are using data queries
+<img width='500px' src="/imgs/displayTags.png" alt=""></br>
+We are using data-* atribute to store custom data. In this case we use <code>prevOp</code> and <code>currentOp</code> to manupulate and show data on display.
 </p>
 Since these are all physical attributes of the calculator, it is appropriate to describe them in HTML.</p>
 Languages used:
